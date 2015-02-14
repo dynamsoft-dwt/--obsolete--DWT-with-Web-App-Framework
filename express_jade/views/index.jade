@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  #dwtcontrolContainer
+  input(
+    type='button'
+    value='Acquire'
+    onclick='AcquireImage()'
+  )
+  input(
+    id='btnUpload'
+    type='button'
+    value='Upload Image'
+    onclick='btnUpload_onclick()'
+  )
+  script(type='text/javascript').
+        function AcquireImage(){
+            DWObject.IfShowUI = false;
+            DWObject.SelectSource();
+            DWObject.OpenSource();
+            DWObject.AcquireImage();
+            }
+            function btnUpload_onclick() {
+                DWObject.HTTPPort = 3000;
+                var CurrentPathName = unescape(location.pathname); // get current PathName in plain ASCII
+                var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+                var strActionPage = CurrentPath + "upload";
+                var strHostIP = "localhost";
+                var sFun = function(){
+                    alert('successful');
+                }, fFun = function(){
+
+                };
+                DWObject.HTTPUploadThroughPostEx(
+                strHostIP,
+                DWObject.CurrentImageIndexInBuffer,
+                strActionPage,
+                "test.jpg",
+                1,// JPEG
+            sFun, fFun
+            );
+            }
+    
