@@ -7,6 +7,10 @@ Screenshots
 -----------
 ![image](http://www.codepool.biz/wp-content/uploads/2015/02/express_jade.png)
 
+Blog
+-----
+[Document Scanning and Uploading in Node.js with Express and Jade][4]
+
 How to Run
 -----------
 1. `npm install`
@@ -21,4 +25,5 @@ References:
 [1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 [2]:http://expressjs.com/
 [3]:http://jade-lang.com/reference/
+[4]:http://www.codepool.biz/nodejs/document-scanning-nodejs-express-jade.html
 
