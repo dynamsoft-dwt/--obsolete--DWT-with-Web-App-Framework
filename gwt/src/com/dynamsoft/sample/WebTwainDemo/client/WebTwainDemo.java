@@ -22,7 +22,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
  */
 public class WebTwainDemo implements EntryPoint {
 	
-	public static native void nativeAcquireImage(String msg) /*-{
+	public static native void nativeAcquireImage() /*-{
 		var DWObject = $wnd.Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'.
 		DWObject.IfDisableSourceAfterAcquire = true; // Source will be closed automatically after acquisition.
 		DWObject.SelectSource(); // Select a Data Source (a device like scanner) from the Data Source Manager.            
@@ -157,15 +157,13 @@ public class WebTwainDemo implements EntryPoint {
 		}
 		
 		class TwainHandler implements ClickHandler {
-			/**
-			 * Fired when the user clicks on the sendButton.
-			 */
+
 			public void onClick(ClickEvent event) {
 				acquireImage();
 			}
 
 			private void acquireImage() {
-				nativeAcquireImage("twain");
+				nativeAcquireImage();
 			}
 		}
 
