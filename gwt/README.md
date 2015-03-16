@@ -7,6 +7,10 @@ Screenshots
 -----------
 ![image](http://www.codepool.biz/wp-content/uploads/2015/03/gwt_dwt.png)
 
+Blog
+----
+[Building Web Scanning Applications with GWT][5]
+
 How to Run
 -----------
 1. install [DWT SDK][2].
@@ -24,5 +28,5 @@ References:
 [2]:https://www.dynamsoft.com/Secure/Register_ClientInfo.aspx?productName=WebTWAIN&from=FromDownload
 [3]:https://developers.google.com/eclipse/docs/download
 [4]:http://www.gwtproject.org/doc/latest/DevGuide.html
-
+[5]:http://www.codepool.biz/twain/web-scanning-applications-with-gwt.html
 
