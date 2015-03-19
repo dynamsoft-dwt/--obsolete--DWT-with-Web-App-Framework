@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="WebScanning">
+<head>
+    <title>Dynamic Web TWAIN with AngularJS</title>
+    <link rel="stylesheet" href="css/dwt.css">
+    <script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"> </script>
+    <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"> </script>
+    <script type="text/javascript" src="js/angular.js"> </script>
+    <script type="text/javascript" src="js/twain.js"> </script>
+</head>
+
+<body>
+<h1>Dynamic Web TWAIN with AngularJS</h1>
+
+<table align="center">
+    <tr>
+        <td>
+            <img src="img/angular-dynamsoft.png">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- dwtcontrolContainer is the default div id for Dynamic Web TWAIN control.
+           If you need to rename the id, you should also change the id in dynamsoft.webtwain.config.js accordingly. -->
+            <div id="dwtcontrolContainer"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div ng-controller="twainControl">
+                <button ng-click="acquireImage()">Scan</button>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
