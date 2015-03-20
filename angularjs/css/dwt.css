@@ -5,3 +5,13 @@ h1 {
   margin: 40px 0px 70px;
   text-align: center;
 }
+
+#img {
+    background-image: url("../img/angular-dynamsoft.png");
+    width: 250px;
+    height: 200px;
+}
+
+table {
+    margin: auto;
+}
