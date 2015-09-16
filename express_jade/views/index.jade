@@ -16,6 +16,12 @@ block content
     onclick='btnUpload_onclick()'
   )
   script(type='text/javascript').
+        Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady',Dynamsoft_OnReady);
+        var DWObject;
+        function Dynamsoft_OnReady(){
+          DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+        }
+ 
         function AcquireImage(){
             DWObject.IfShowUI = false;
             DWObject.SelectSource();
